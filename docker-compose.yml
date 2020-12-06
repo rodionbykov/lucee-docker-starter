@@ -1,0 +1,10 @@
+services:
+  cfml:
+    container_name: lucee-starter
+    image: lucee/lucee
+    volumes: 
+      - "./www:/var/www"
+      - "./config/server.xml:/usr/local/tomcat/conf/server.xml"
+      - "./config/password.txt:/opt/lucee/server/lucee-server/context/password.txt"
+    ports:
+      - 8088:8888
